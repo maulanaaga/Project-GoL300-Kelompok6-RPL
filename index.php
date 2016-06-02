@@ -242,6 +242,10 @@ echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
 		</div>
 		<div class="clear"></div>
 	</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 </body> 
 </html>
 <?php
