@@ -76,6 +76,74 @@ function MM_popupMsg(msg) {
 				</div>
 			</div>
 		</div>
+		<div class="separator"></div>
+		<div class="columns">
+			<div class="wrap">
+				<div class="oneOfThree first">
+				  <div id="log">
+                    <h3>User Login</h3>
+				    <form action="<?php echo $loginFormAction; ?>" method="POST" name="form1" id="form1">
+                      <fieldset>
+                      <label for="text1">Username</label>
+                      USERNAME
+                      <br />
+                        <input id="text1" type="text" name="text1" value="" />
+                        <br />
+                      <label for="text2">Password</label>
+                        PASSWORD<br />
+                      <input id="text2" type="password" name="text2" value="" />
+                        <br />
+                        <input type="submit" id="login-submit" onclick="MM_popupMsg('SELAMAT DATANG')" value="Login" />
+                      <input name="Reset" type="reset" id="login-submit2" value="Reset" />
+                      </fieldset>
+			        </form>
+				    <br />
+                    <div id="left_bot"></div>
+			      </div>
+			<!--	  <h2 align="left">Tes</h2>
+				  <?php do { ?><marquee behavior="scroll" direction="up" scrollamount="2">
+			      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                    <tr>
+                      <td bgcolor="#000000"><span class="style1"><?php echo $row_rstesti['username']; ?></span></td>
+                    </tr>
+                    <tr>
+                      <td height="34" bgcolor="#000000"><span class="style3"><?php echo $row_rstesti['pesan']; ?></span></td>
+                    </tr> -->
+                                          </table></marquee>
+				    <?php } while ($row_rstesti = mysql_fetch_assoc($rstesti)); ?>
+			  </div>
+			  <p>&nbsp;</p>
+<div class="twoOfThree last headline">
+  <h10 class="cs-title">  <?php 
+$nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
+echo 'SEKARANG: '.date('Y-m-d')."\n";
+echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
+?> </h10>
+  <h1>Selamat Datang di Go-L300</h1>
+  <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, &quot;NO NGANTRI, NO CALO, GA PAKE RIBET&quot;</p>
+				</div>
+		  </div>
+			<div class="separator"></div>
+			<div class="wrap"></div>
+  </div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="wrap">
+				<div class="footer_logo">
+					<a href="#" title="Design Lovers">Design Lovers</a>
+				</div>
+				<ul id="footer_nav">
+					<li class="current"><a href="index.php">Home</a></li>
+					<li><a href="jadwal1.php">JADWAL</a></li>
+					<li><a href="berita1.php">BERITA</a></li>
+					<li><a href="contact1.php">Contact</a></li>
+			  </ul>
+				<p id="copy">INF14 &copy;RPL-6 </p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
 
 </body> 
 </html>
