@@ -50,8 +50,3 @@ function MM_popupMsg(msg) {
 
 </body> 
 </html>
-<?php
-mysql_free_result($rsusers);
-
-mysql_free_result($rstesti);
-?>
