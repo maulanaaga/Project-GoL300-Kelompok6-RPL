@@ -51,6 +51,7 @@ function MM_popupMsg(msg) {
 <div class="separator"></div>
 		<div id="slider_container">
 			<div class="wrap">
+			
 				<div id="coin-slider">
 					<a href="#">
 						<img src="images/f1.jpg" alt="" />
