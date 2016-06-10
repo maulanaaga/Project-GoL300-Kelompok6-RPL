@@ -4,7 +4,6 @@
 if (!isset($_SESSION)) {
   session_start();
 }
-<<<<<<< HEAD
 
 // ** Logout the current user. **
 $logoutAction = $_SERVER['PHP_SELF']."?doLogout=true";
@@ -246,5 +245,3 @@ mysql_free_result($rsusers);
 
 mysql_free_result($rstesti);
 ?>
-=======
->>>>>>> master
