@@ -42,7 +42,6 @@ function MM_popupMsg(msg) { //v1.0
 					<li class="current"><a href="index.php">Home</a></li>
 				  <li><a href="jadwal1.php">jadwaL</a></li>
                   <li><a href="berita1.php">berita</a></li>
-					<li><a href="arsip1.php">ARSIP</a></li>
 					<li><a href="contact1.php">Contact</a></li>
 			  </ul>
 			</div>
