@@ -246,7 +246,7 @@ echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
                 <td><?php echo $row_rsjadwal['jadwalID']; ?></td>
               </tr>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>NAMA KA:</strong></div></td>
+                <td align="right"><div align="left"><strong>NAMA CV:</strong></div></td>
                 <td><input type="text" name="KAID" value="<?php echo htmlentities($row_rsjadwal['KANama']); ?>" size="32" /></td>
               </tr>
               <tr valign="baseline">
@@ -263,7 +263,7 @@ do {
               </tr>
               <tr> </tr>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>Stasiun Tujuan:</strong></div></td>
+                <td align="right"><div align="left"><strong>Tujuan:</strong></div></td>
                 <td><select name="StasiunID1">
                     <?php 
 do {  
@@ -315,7 +315,7 @@ do {
     </div>
 </div>
 <div id="footer">
-	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By:Alter</p>
+	<p>&copy; GO-L300 Kelompok 6 RPL</p>
 </div>
 </body>
 </html>
