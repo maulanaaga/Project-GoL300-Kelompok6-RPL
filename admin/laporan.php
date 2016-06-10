@@ -167,7 +167,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LAPORAN TRANSAKSI</title>
 <script>function confirmDelete() {  
-        return confirm("Yakin Hapus?")  
+        return confirm("Ingin Menghapus Data ini?")  
       }  </script>
 <link rel="Shortcut Icon" href="../images/train.ico">
 <link rel="stylesheet" href="../styles.css" type="text/css" />
@@ -246,7 +246,7 @@ Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rs
                 <div align="center"><strong>TANGGAL KEBERANGKATAN</strong></div>
               </div></td>
               <td width="11%"><div align="center" class="style1">
-                <div align="center"><strong>DELETE</strong></div>
+                <div align="center"><strong>HAPUS</strong></div>
               </div></td>
             </tr>
             <tr>
