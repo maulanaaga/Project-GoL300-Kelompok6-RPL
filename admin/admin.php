@@ -225,7 +225,7 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
             <table width="100%" border="0" cellspacing="0" cellpadding="3">
               <tr>
                 <td><div align="center"><strong>JADWAL ID</strong></div></td>
-                <td><div align="center"><strong>KA</strong></div></td>
+                <td><div align="center"><strong>CV</strong></div></td>
                 <td><div align="center"><strong>DARI</strong></div></td>
                 <td><div align="center"><strong>TUJUAN</strong></div></td>
                 <td><div align="center"><strong>KELAS</strong></div></td>
