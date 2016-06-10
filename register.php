@@ -87,3 +87,58 @@ delay:3000//Delay between transitions
                           <td nowrap="nowrap" align="right">Password:</td>
                           <td><input type="text" name="password" value="" size="20" /></td>
                         </tr>
+                                                <tr valign="baseline">
+                          <td nowrap="nowrap" align="right">Nomor HP:</td>
+                          <td><input type="text" name="nomorhp" value="" size="20" /></td>
+                        </tr>
+                        <tr valign="baseline">
+                          <td nowrap="nowrap" align="right">Email:</td>
+                          <td><input type="text" name="email" value="" size="20" /></td>
+                        </tr>
+                        <tr valign="baseline">
+                          <td nowrap="nowrap" align="right">Alamat:</td>
+                          <td><input type="text" name="alamat" value="" size="20" /></td>
+                        </tr>
+                        <tr valign="baseline">
+                          <td nowrap="nowrap" align="right">&nbsp;</td>
+                          <td><input type="submit" value="Daftar" />
+                          <input name="Reset" type="reset" value="Reset" /></td>
+                        </tr>
+                      </table>
+                      <input type="hidden" name="MM_insert" value="form1" />
+                    </form>
+                    <p>&nbsp;</p>
+                    <br />
+                    <div id="left_bot"></div>
+			      </div>
+				  <h2 align="center">&nbsp;</h2>
+			  </div>
+			  <p>&nbsp;</p>
+<div class="twoOfThree last headline">
+					<h1>Selamat Datang di GO-L300</h1>
+					<p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, &quot;NO NGANTRI, NO CALO, Ga Pake Ribet&quot;</p>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<div class="wrap"></div>
+  </div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="wrap">
+				<div class="footer_logo">
+					<a href="#" title="Design Lovers">Design Lovers</a>
+				</div>
+				<ul id="footer_nav">
+					<li class="current"><a href="index.php">Home</a></li>
+				  <li><a href="jadwal1.php">JADWAL</a></li>
+				  <li><a href="berita1.php">BERITA</a></li>
+				  <li><a href="contact1.php">Contact</a></li>
+			  </ul>
+				<p id="copy">Designed by &copy;RPL-6 </p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</body> 
+</html>
