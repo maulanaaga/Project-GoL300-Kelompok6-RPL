@@ -284,11 +284,7 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
                   <li>
                     <p style="margin: 0;"><strong>Programmer and Designer:</strong></p>
                   </li>
-                  <li>Alter Gajah Mada</li>
-                  <li><strong>Tester and Analyser:</strong></li>
-                  <li>Abdul Gani</li>
-                  <li><strong>Documentation:</strong></li>
-                  <li>Bactiar Pradesta</li>
+                  <li>Kelompok 6 RPL</li>
                 </ul>
               </li>
                 
