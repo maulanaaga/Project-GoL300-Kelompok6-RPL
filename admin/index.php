@@ -153,7 +153,7 @@ function MM_validateForm() { //v4.0
 	  </div>
 <div id="mainEnd">
 			<div id="footer">
-			  <p>Copyright &copy; <a href="../index.php">keretaonline</a>.2010 | Designed by alter.</p>
+			  <p>Copyright &copy; <a href="../index.php">Go-L300</a>.2010 | Designed by RPL-06</p>
 	  </div>
 		</div>
 	</div>
