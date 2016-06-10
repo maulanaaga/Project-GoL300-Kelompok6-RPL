@@ -280,7 +280,7 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
     </div>
 </div>
 <div id="footer">
-	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By:Alter</p>
+	<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 </div>
 </body>
 </html>
