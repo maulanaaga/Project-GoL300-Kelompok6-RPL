@@ -1,4 +1,4 @@
-<?php require_once('Connections/connkereta.php'); ?>
+<?php require_once('Connections/conl300.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -56,7 +56,7 @@ if (isset($_GET['totalRows_rstesti'])) {
 }
 $totalPages_rstesti = ceil($totalRows_rstesti/$maxRows_rstesti)-1;
 ?><?php
-// *** Validate request to login to this site.
+
 if (!isset($_SESSION)) {
   session_start();
 }
@@ -112,10 +112,10 @@ if (isset($_POST['text1'])) {
 <script type="text/javascript" src="js/coin-sli.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){$('#coin-slider').coinslider({ 
-width:900,height:300,navigation:true,effect:'random',//random, swirl, rain, straight
-delay:3000//Delay between transitions
+width:900,height:300,navigation:true,effect:'random',
+delay:3000
 });});
-function MM_popupMsg(msg) { //v1.0
+function MM_popupMsg(msg) {
   alert(msg);
 }
 </script>
@@ -157,19 +157,19 @@ function MM_popupMsg(msg) { //v1.0
 					</a>
 					<a href="#">
 						<img src="images/f2.jpg" alt="" />
-						<span><strong>Argo Bromo.</strong> Jakarta-Surabaya, hanya 5 jam. </span>
+						<span><strong>GO-L300</strong>GO-L300 Mengutamakan kenyamanan penumpang</span>
 					</a>
 					<a href="#">
 						<img src="images/f3.jpg" alt="" />
-						<span><strong>Pemandangan yang indah</strong> Nikmati perjalanan dengan pemandangan yang asri dan nyaman </span>
+						<span><strong>GO-L300</strong> GO-L300 Mengutamakan kenyamanan penumpang </span>
 					</a>
 					<a href="#">
 						<img src="images/f4.jpg" alt="" />
-						<span><strong>Kami Siap melayani anda.</strong> Cepat, Tepat, Aman , dan terjangkau </span>
+						<span><strong>GO-L300</strong> GO-L300 Mengutamakan kenyamanan penumpang </span>
 					</a>
 					<a href="#">
 						<img src="images/f5.jpg" alt="" />
-						<span><strong>Interior yang Nyaman</strong> kami manjakan anda dengan segala fasilitas yang membuat anda nyaman </span>
+						<span><strong>GO-L300</strong> GO-L300 Mengutamakan kenyamanan penumpang </span>
 					</a>
 				</div>
 			</div>
@@ -198,7 +198,7 @@ function MM_popupMsg(msg) { //v1.0
 				    <br />
                     <div id="left_bot"></div>
 			      </div>
-			<!--	  <h2 align="left">Tes</h2>
+			      <h2 align="left">Tes</h2>
 				  <?php do { ?><marquee behavior="scroll" direction="up" scrollamount="2">
 			      <table width="100%" border="0" cellspacing="0" cellpadding="3">
                     <tr>
@@ -206,14 +206,14 @@ function MM_popupMsg(msg) { //v1.0
                     </tr>
                     <tr>
                       <td height="34" bgcolor="#000000"><span class="style3"><?php echo $row_rstesti['pesan']; ?></span></td>
-                    </tr> -->
+                    </tr>
                                           </table></marquee>
 				    <?php } while ($row_rstesti = mysql_fetch_assoc($rstesti)); ?>
 			  </div>
 			  <p>&nbsp;</p>
 <div class="twoOfThree last headline">
   <h10 class="cs-title">  <?php 
-$nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
+$nextWeek = time() + (7*24*60*60);
 echo 'SEKARANG: '.date('Y-m-d')."\n";
 echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
 ?> </h10>
