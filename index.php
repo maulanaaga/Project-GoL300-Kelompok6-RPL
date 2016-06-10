@@ -1,4 +1,4 @@
-<?php require_once('Connections/conl300.php'); ?>
+<?php require_once('Connections/connkereta.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -56,7 +56,7 @@ if (isset($_GET['totalRows_rstesti'])) {
 }
 $totalPages_rstesti = ceil($totalRows_rstesti/$maxRows_rstesti)-1;
 ?><?php
-
+// *** Validate request to login to this site.
 if (!isset($_SESSION)) {
   session_start();
 }
@@ -112,10 +112,10 @@ if (isset($_POST['text1'])) {
 <script type="text/javascript" src="js/coin-sli.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){$('#coin-slider').coinslider({ 
-width:900,height:300,navigation:true,effect:'random',
-delay:3000
+width:900,height:300,navigation:true,effect:'random',//random, swirl, rain, straight
+delay:3000//Delay between transitions
 });});
-function MM_popupMsg(msg) {
+function MM_popupMsg(msg) { //v1.0
   alert(msg);
 }
 </script>
@@ -142,7 +142,6 @@ function MM_popupMsg(msg) {
 					<li class="current"><a href="index.php">Home</a></li>
 				  <li><a href="jadwal1.php">jadwaL</a></li>
                   <li><a href="berita1.php">berita</a></li>
-					<li><a href="arsip1.php">ARSIP</a></li>
 					<li><a href="contact1.php">Contact</a></li>
 			  </ul>
 			</div>
@@ -157,19 +156,19 @@ function MM_popupMsg(msg) {
 					</a>
 					<a href="#">
 						<img src="images/f2.jpg" alt="" />
-						<span><strong>GO-L300</strong>GO-L300 Mengutamakan kenyamanan penumpang</span>
+						<span><strong>Kami siap melayani Anda</strong> Cepat, Tepat, Aman , dan terjangkau </span>
 					</a>
 					<a href="#">
 						<img src="images/f3.jpg" alt="" />
-						<span><strong>GO-L300</strong> GO-L300 Mengutamakan kenyamanan penumpang </span>
+						<span><strong>Interior yang Nyaman</strong> kami manjakan anda dengan segala fasilitas yang membuat anda nyaman </span>
 					</a>
 					<a href="#">
 						<img src="images/f4.jpg" alt="" />
-						<span><strong>GO-L300</strong> GO-L300 Mengutamakan kenyamanan penumpang </span>
+						<span><strong>Kami Siap melayani anda.</strong> Cepat, Tepat, Aman , dan terjangkau </span>
 					</a>
 					<a href="#">
 						<img src="images/f5.jpg" alt="" />
-						<span><strong>GO-L300</strong> GO-L300 Mengutamakan kenyamanan penumpang </span>
+						<span><strong>Interior yang Nyaman</strong> kami manjakan anda dengan segala fasilitas yang membuat anda nyaman </span>
 					</a>
 				</div>
 			</div>
@@ -195,10 +194,15 @@ function MM_popupMsg(msg) {
                       <input name="Reset" type="reset" id="login-submit2" value="Reset" />
                       </fieldset>
 			        </form>
+			        <p></p>
+			        <p>Belum punya Akun?<a href="register.php">Klik Disini</a></p>
+			        <p></p>
+			        <p><a href="admin">Login Admin</a></p>
 				    <br />
+	
                     <div id="left_bot"></div>
 			      </div>
-			      <h2 align="left">Tes</h2>
+			<!--	  <h2 align="left">Tes</h2>
 				  <?php do { ?><marquee behavior="scroll" direction="up" scrollamount="2">
 			      <table width="100%" border="0" cellspacing="0" cellpadding="3">
                     <tr>
@@ -206,17 +210,13 @@ function MM_popupMsg(msg) {
                     </tr>
                     <tr>
                       <td height="34" bgcolor="#000000"><span class="style3"><?php echo $row_rstesti['pesan']; ?></span></td>
-                    </tr>
+                    </tr> -->
                                           </table></marquee>
 				    <?php } while ($row_rstesti = mysql_fetch_assoc($rstesti)); ?>
 			  </div>
 			  <p>&nbsp;</p>
 <div class="twoOfThree last headline">
-  <h10 class="cs-title">  <?php 
-$nextWeek = time() + (7*24*60*60);
-echo 'SEKARANG: '.date('Y-m-d')."\n";
-echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
-?> </h10>
+
   <h1>Selamat Datang di Go-L300</h1>
   <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, &quot;NO NGANTRI, NO CALO, GA PAKE RIBET&quot;</p>
 				</div>
@@ -242,10 +242,6 @@ echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
 		</div>
 		<div class="clear"></div>
 	</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 </body> 
 </html>
 <?php
