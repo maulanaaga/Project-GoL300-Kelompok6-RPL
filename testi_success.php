@@ -1,3 +1,70 @@
+$editFormAction = $_SERVER['PHP_SELF'];
+if (isset($_SERVER['QUERY_STRING'])) {
+  $editFormAction .= "?" . htmlentities($_SERVER['QUERY_STRING']);
+}
+
+if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
+  $insertSQL = sprintf("INSERT INTO testi (username, pesan) VALUES (%s, %s)",
+                       GetSQLValueString($_POST['username'], "text"),
+                       GetSQLValueString($_POST['pesan'], "text"));
+
+  mysql_select_db($database_connkereta, $connkereta);
+  $Result1 = mysql_query($insertSQL, $connkereta) or die(mysql_error());
+
+  $insertGoTo = "testi_success.php";
+  if (isset($_SERVER['QUERY_STRING'])) {
+    $insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";
+    $insertGoTo .= $_SERVER['QUERY_STRING'];
+  }
+  header(sprintf("Location: %s", $insertGoTo));
+}
+
+$maxRows_rsusers = 2;
+$pageNum_rsusers = 0;
+if (isset($_GET['pageNum_rsusers'])) {
+  $pageNum_rsusers = $_GET['pageNum_rsusers'];
+}
+$startRow_rsusers = $pageNum_rsusers * $maxRows_rsusers;
+
+mysql_select_db($database_connkereta, $connkereta);
+$query_rsusers = "SELECT * FROM users";
+$query_limit_rsusers = sprintf("%s LIMIT %d, %d", $query_rsusers, $startRow_rsusers, $maxRows_rsusers);
+$rsusers = mysql_query($query_limit_rsusers, $connkereta) or die(mysql_error());
+$row_rsusers = mysql_fetch_assoc($rsusers);
+
+if (isset($_GET['totalRows_rsusers'])) {
+  $totalRows_rsusers = $_GET['totalRows_rsusers'];
+} else {
+  $all_rsusers = mysql_query($query_rsusers);
+  $totalRows_rsusers = mysql_num_rows($all_rsusers);
+}
+$totalPages_rsusers = ceil($totalRows_rsusers/$maxRows_rsusers)-1;
+
+$maxRows_rstesti = 3;
+$pageNum_rstesti = 0;
+if (isset($_GET['pageNum_rstesti'])) {
+  $pageNum_rstesti = $_GET['pageNum_rstesti'];
+}
+$startRow_rstesti = $pageNum_rstesti * $maxRows_rstesti;
+
+$colname_rstesti = "-1";
+if (isset($_GET['testiID'])) {
+  $colname_rstesti = $_GET['testiID'];
+}
+mysql_select_db($database_connkereta, $connkereta);
+$query_rstesti = sprintf("SELECT * FROM testi WHERE testiID = %s ORDER BY testiID DESC", GetSQLValueString($colname_rstesti, "int"));
+$query_limit_rstesti = sprintf("%s LIMIT %d, %d", $query_rstesti, $startRow_rstesti, $maxRows_rstesti);
+$rstesti = mysql_query($query_limit_rstesti, $connkereta) or die(mysql_error());
+$row_rstesti = mysql_fetch_assoc($rstesti);
+
+if (isset($_GET['totalRows_rstesti'])) {
+  $totalRows_rstesti = $_GET['totalRows_rstesti'];
+} else {
+  $all_rstesti = mysql_query($query_rstesti);
+  $totalRows_rstesti = mysql_num_rows($all_rstesti);
+}
+$totalPages_rstesti = ceil($totalRows_rstesti/$maxRows_rstesti)-1;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -134,3 +201,8 @@ function MM_popupMsg(msg) { //v1.0
 	</div>
 </body> 
 </html>
+<?php
+mysql_free_result($rsusers);
+
+mysql_free_result($rstesti);
+?>
