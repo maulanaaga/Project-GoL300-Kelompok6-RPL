@@ -65,17 +65,10 @@ if (isset($_POST['username'])) {
     
     //declare two session variables and assign them
     $_SESSION['MM_Username'] = $loginUsername;
-<<<<<<< HEAD
     $_SESSION['MM_UserGroup'] = $loginStrGroup;       
 
     if (isset($_SESSION['PrevUrl']) && false) {
       $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];  
-=======
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
-
-    if (isset($_SESSION['PrevUrl']) && false) {
-      $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
->>>>>>> master
     }
     header("Location: " . $MM_redirectLoginSuccess );
   }
@@ -123,7 +116,6 @@ function MM_validateForm() { //v4.0
 </head>
 <body>
 <div id="container">
-<<<<<<< HEAD
   <div id="header"></div>
   <div id="leftCol"><img src="images/left.jpg" alt="LeftImage"/></div>
   
@@ -134,18 +126,6 @@ function MM_validateForm() { //v4.0
     <div id="mainMiddle">
       <form ACTION="<?php echo $loginFormAction; ?>" id="form1" name="form1" method="POST">
         <table width="41%" border="1" align="center" cellpadding="3" cellspacing="0" onclick="MM_validateForm('username','','R','password','','R');return document.MM_returnValue">
-=======
-	<div id="header"></div>
-  <div id="leftCol"><img src="images/left.jpg" alt="LeftImage"/></div>
-	
-<div id="mainCol">
-		<div id="mainHeader">
-		  <p align="center">ADMIN LOGIN</p>
-	  </div>
-		<div id="mainMiddle">
-			<form ACTION="<?php echo $loginFormAction; ?>" id="form1" name="form1" method="POST">
-			  <table width="41%" border="1" align="center" cellpadding="3" cellspacing="0" onclick="MM_validateForm('username','','R','password','','R');return document.MM_returnValue">
->>>>>>> master
                 <tr>
                   <td width="26%"><strong>Username</strong></td>
 <td width="74%"><label>
@@ -169,7 +149,6 @@ function MM_validateForm() { //v4.0
                 </tr>
               </table>
           </form>
-<<<<<<< HEAD
       <p>&nbsp;</p>
     </div>
 <div id="mainEnd">
@@ -178,16 +157,6 @@ function MM_validateForm() { //v4.0
     </div>
     </div>
   </div>
-=======
-		  <p>&nbsp;</p>
-	  </div>
-<div id="mainEnd">
-			<div id="footer">
-			  <p>Copyright &copy; <a href="../index.php">keretaonline</a>.2010 | Designed by alter.</p>
-	  </div>
-		</div>
-	</div>
->>>>>>> master
 </div>
 </body>
 </html>
