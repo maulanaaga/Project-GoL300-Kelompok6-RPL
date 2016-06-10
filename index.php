@@ -194,7 +194,12 @@ function MM_popupMsg(msg) { //v1.0
                       <input name="Reset" type="reset" id="login-submit2" value="Reset" />
                       </fieldset>
 			        </form>
+			        <p></p>
+			        <p>Belum punya Akun?<a href="register.php">Klik Disini</a></p>
+			        <p></p>
+			        <p><a href="admin">Login Admin</a></p>
 				    <br />
+	
                     <div id="left_bot"></div>
 			      </div>
 			<!--	  <h2 align="left">Tes</h2>
