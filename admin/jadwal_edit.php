@@ -250,7 +250,7 @@ echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
                 <td><input type="text" name="KAID" value="<?php echo htmlentities($row_rsjadwal['KANama']); ?>" size="32" /></td>
               </tr>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>Stasiun Keberangkatan:</strong></div></td>
+                <td align="right"><div align="left"><strong>Keberangkatan:</strong></div></td>
                 <td><select name="stasiunID">
                     <?php 
 do {  
