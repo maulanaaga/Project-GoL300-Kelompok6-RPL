@@ -202,7 +202,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
   </div>
     <div id="page-intro">
     	<h2>Welcome to ticket GO-L300 </h2>
-        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO COPET, NO NGANTRI, NO CALO"</p>
+        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO REPOT, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
     <div id="body">
