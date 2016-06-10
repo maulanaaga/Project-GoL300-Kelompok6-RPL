@@ -189,7 +189,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <div id="container">
 	<div id="header">
     	<h1><a href="/"><img src="../images/footer-l.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
-      <h2>Welcome to ticket GO-L300</h2>
+      <h2>Welcome to GO-L300</h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
@@ -201,7 +201,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
     </ul>
   </div>
     <div id="page-intro">
-    	<h2>Welcome to ticket On-Line Kereta Api</h2>
+    	<h2>Welcome to ticket GO-L300 </h2>
         <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO COPET, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
