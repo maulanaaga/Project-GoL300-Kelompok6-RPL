@@ -192,7 +192,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <div id="container">
 	<div id="header">
     	<h1><a href="/"><img src="../images/footerlold.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
-      <h2>Welcome to ticket On-Line Kereta Api</h2>
+      <h2>Welcome to Go-L300</h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
