@@ -271,8 +271,8 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 </p>
 <p align="left" class="style1">&nbsp;</p>
 <p align="left" class="style1"><a href="tambah_jadwal.php"><strong>TAMBAH JADWAL</strong></a></p>
-<p align="left" class="style1"><a href="tambah_kereta.php"><strong>TAMBAH KERETA</strong></a></p>
-<p align="left" class="style1"><a href="tambah_stasiun.php"><strong>TAMBAH STASIUN</strong></a></p>
+<p align="left" class="style1"><a href="tambah_kereta.php"><strong>TAMBAH CV L300</strong></a></p>
+<p align="left" class="style1"><a href="tambah_stasiun.php"><strong>TAMBAH TERMINAL</strong></a></p>
 <p align="left" class="style4"><a href="tambah_kelas.php">TAMBAH KELAS</a></p>
 	  </div>
         
