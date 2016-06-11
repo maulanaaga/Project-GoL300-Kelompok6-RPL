@@ -23,3 +23,20 @@ delay:3000//Delay between transitions
 	color: #FF0000;
 	font-weight: bold;
 }
+</style>
+</head>
+<body class="noJs">
+<div class="container">
+		<div id="header">
+			<div class="wrap">
+				<div class="logo">
+					<a href="#" title="Design Lovers">Design Lovers</a>
+				</div>
+				<ul id="nav">
+					<li class="current"><a href="index.php">Home</a></li>
+				  <li><a href="jadwal1.php">jadwaL</a></li>
+                  <li><a href="berita1.php">berita</a></li>
+				  <li><a href="contact1.php">Contact</a></li>
+			  </ul>
+			</div>
+		</div>
