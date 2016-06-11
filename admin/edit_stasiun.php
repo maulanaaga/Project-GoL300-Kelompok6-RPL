@@ -229,19 +229,19 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
           <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
             <p align="left"><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
-echo 'SEKARANG: '.date('Y-m-d')."\n";
-echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
+echo 'SEKARANG: '.date('d-m-Y')."\n";
+echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 ?>
   </h10></p>
             <div align="left"></div>
           <form action="<?php echo $editFormAction; ?>" method="post" id="form1">
             <table>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>StasiunID:</strong></div></td>
+                <td align="right"><div align="left"><strong>TerminalID:</strong></div></td>
                 <td><?php echo $row_rsstasiun['stasiunID']; ?></td>
               </tr>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>Nama Stasiun:</strong></div></td>
+                <td align="right"><div align="left"><strong>Nama Terminal:</strong></div></td>
                 <td><input type="text" name="stasiunNama" value="<?php echo htmlentities($row_rsstasiun['stasiunNama'], ENT_COMPAT, 'utf-8'); ?>" size="32" /></td>
               </tr>
               <tr valign="baseline">
