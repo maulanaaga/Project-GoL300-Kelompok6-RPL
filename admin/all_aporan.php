@@ -204,7 +204,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
   </div>
     <div id="page-intro">
     	<h2>Welcome to ticket GO-L300</h2>
-        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO COPET, NO NGANTRI, NO CALO"</p>
+        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, "NO REPOT, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
     <div id="body">
@@ -213,8 +213,8 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
             <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
             <p><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
-echo 'SEKARANG: '.date('Y-m-d')."\n";
-echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
+echo 'SEKARANG: '.date('d-m-Y')."\n";
+echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 ?>
   </h10></p>
           <p align="center" class="style2">LAPORAN SEMUA TRANSAKSI</p>
@@ -292,7 +292,7 @@ Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rs
     </div>
 </div>
 <div id="footer">
-	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By:Alter</p>
+	<p>&copy; GO-L300 RPL Kelompok 6</p>
 </div>
 </body>
 </html>
