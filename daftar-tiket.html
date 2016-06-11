@@ -15,21 +15,26 @@
 	</div>
 		<div class = "container">
 		<div class = "row">
-		<div class = "col-xs-offset-3 col-xs-6">
+		<div class = "col-xs-offset-3 col-xs-5">
 		<div class = "well">
 	
 	<form class ="form-horizontal" action = "simpan.php " method = "post">
 		
 		<div class="form-group">
-            <label class="control-label col-xs-2">Kota Asal</label>
-            <div class="col-xs-10">
+            <label class="control-label col-xs-3">Kota Asal</label>
+            <div class="col-xs-8">
                 <input type="text" placeholder="Masukkan Kota Asal" class="form-control" size="30" required="required"><br>
             </div>
         </div>
 		<div class="form-group">
-            <label class="control-label col-xs-2">Kota Tujuan</label>
-            <div class="col-xs-10">
-                <input type="text" placeholder="Masukkan Kota Tujuan" class="form-control" size="30" required="required"><br>
+            <label class="control-label col-xs-4">Kota Tujuan</label>
+            <div class="col-xs-7">
+                <select class="country">
+				<option value="">Pilih Kota Tujuan</option>
+            <option value="">Langsa</option>
+            <option value="india">Peurlak</option>
+            <option value="uk">Idi</option>
+        </select>
             </div>
         </div>
 				<div class="form-group">
@@ -37,6 +42,7 @@
             <div class="">
           
         <select class="country">
+			<option value="">Pilih CV. L300</option>
             <option value="">CV. Mandala</option>
             <option value="india">CV. Putri Kembar</option>
             <option value="uk">CV. Buraq</option>
