@@ -165,9 +165,9 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>LAPORAN TRANSAKSI</title>
+<title>EDIT DELETE JADWAl</title>
 <script>function confirmDelete() {  
-        return confirm("Ingin Menghapus Data ini?")  
+        return confirm("Ingin Hapus data ini?")  
       }  </script>
 <link rel="Shortcut Icon" href="../images/train.ico">
 <link rel="stylesheet" href="../styles.css" type="text/css" />
@@ -179,14 +179,8 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 	font-size: 16px;
 	font-weight: bold;
 }
-.style6 {
-	color: #0000FF;
-	font-weight: bold;
-}
-.style7 {
-	color: #FF3399;
-	font-weight: bold;
-}
+.style3 {color: #000000}
+.style4 {color: #FF0000; font-weight: bold; }
 -->
 </style>
 </head>
@@ -204,99 +198,89 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
             <li><a href="edit_jadwal.php">Jadwal</a></li>
           <li><a href="edit.php">EDIT DATA</a></li>
           <li class="nav-search"></li>
-        </ul>
+    </ul>
   </div>
     <div id="page-intro">
-    	<h2>Welcome to ticket GO-L300</h2>
-        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO REPOT, NO NGANTRI, NO CALO"</p>
+    	<h2>Welcome to ticket GO-L300 </h2>
+        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, "NO REPOT, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
     <div id="body">
 		<div id="content">
-			<h2><strong>Transaksi Penjualan Tiket</strong></h2>
-            <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
+			<h2><strong>EDIT &amp; DELETE DATA</strong></h2>
+          <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
             <p><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
 echo 'SEKARANG: '.date('d-m-Y')."\n";
 echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 ?>
   </h10></p>
-          <p align="center" class="style2">LAPORAN TRANSAKSI</p>
-          <p align="left" class="style1">&nbsp;
-Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rsreservasi + $maxRows_rsreservasi, $totalRows_rsreservasi) ?> of <?php echo $totalRows_rsreservasi ?> </p>
-          <?php do { ?>
-          <table width="100%" border="0" cellspacing="0" cellpadding="3">
-            <tr>
-              <td width="20%"><div align="center" class="style1">
-                <div align="center"><strong>RESERVASI ID</strong></div>
-              </div></td>
-              <td width="10%"><div align="center" class="style1">
-                <div align="center"><strong>NAMA</strong></div>
-              </div></td>
-              <td width="12%"><div align="center" class="style1">
-                <div align="center"><strong>NO.TELP</strong></div>
-              </div></td>
-              <td width="11%"><div align="center" class="style1">
-                <div align="center"><strong>E-MAIL</strong></div>
-              </div></td>
-              <td width="16%"><div align="center" class="style1">
-                <div align="center"><strong>JADWAL ID</strong></div>
-              </div></td>
-              <td width="20%"><div align="center" class="style1">
-                <div align="center"><strong>TANGGAL KEBERANGKATAN</strong></div>
-              </div></td>
-              <td width="11%"><div align="center" class="style1">
-                <div align="center"><strong>HAPUS</strong></div>
-              </div></td>
-            </tr>
-            <tr>
-              <td><div align="center" class="style7"><?php echo $row_rsreservasi['reservasiID']; ?></div></td>
-              <td><div align="center" class="style6"><?php echo $row_rsreservasi['nama']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['no_telp']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['email']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['jadwalID']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['tanggal_berangkat']; ?></div></td>
-              <td><div align="center"><a href="delete_reservasi.php?reservasiID=<?php echo $row_rsreservasi['reservasiID']; ?>"onclick="return confirmDelete()">DELETE</a></div></td>
-            </tr>
-                          </table>
-            <?php } while ($row_rsreservasi = mysql_fetch_assoc($rsreservasi)); ?>
-            <table border="0">
-            <tr>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi > 0) { // Show if not first page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, 0, $queryString_rsreservasi); ?>">First</a>
-                <?php } // Show if not first page ?>
-              </div></td>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi > 0) { // Show if not first page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, max(0, $pageNum_rsreservasi - 1), $queryString_rsreservasi); ?>">Previous</a>
-                <?php } // Show if not first page ?>
-              </div></td>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi < $totalPages_rsreservasi) { // Show if not last page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, min($totalPages_rsreservasi, $pageNum_rsreservasi + 1), $queryString_rsreservasi); ?>">Next</a>
-                <?php } // Show if not last page ?>
-              </div></td>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi < $totalPages_rsreservasi) { // Show if not last page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, $totalPages_rsreservasi, $queryString_rsreservasi); ?>">Last</a>
-                <?php } // Show if not last page ?>
-              </div></td>
-            </tr>
-          </table>
-          </p>
-<p align="left" class="style1">&nbsp;</p>          
-          <div align="center"></div>
-          </p>
-<p>&nbsp;</p>
-          <p align="center" class="style1">&nbsp;</p>
+            <p class="style1">Records <?php echo ($startRow_rsjadwal + 1) ?> to <?php echo min($startRow_rsjadwal + $maxRows_rsjadwal, $totalRows_rsjadwal) ?> of <?php echo $totalRows_rsjadwal ?> </p>
+            <form id="form1" method="post" action="">
+              <?php do { ?>
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr>
+                  <td><div align="center"><strong>JADWAL ID</strong></div></td>
+                  <td><div align="center"><strong>CV</strong></div></td>
+                  <td><div align="center"><strong>DARI</strong></div></td>
+                  <td><div align="center"><strong>TUJUAN</strong></div></td>
+                  <td><div align="center"><strong>KELAS</strong></div></td>
+                  <td><div align="center"><strong>HARGA</strong></div></td>
+                  <td><div align="center"><strong>JAM</strong></div></td>
+                  <td><div align="center"><strong><a href="jadwal_edit.php?jadwalID=<?php echo $row_rsjadwal['jadwalID']; ?>">EDIT</a></strong></div></td>
+                  <td><div align="center"><strong><a href="delete_jadwal.php?jadwalID=<?php echo $row_rsjadwal['jadwalID']; ?>"onclick="return confirmDelete()">DELETE</a></strong></div></td>
+                </tr>
+                <tr>
+                  <td><div align="center"><?php echo $row_rsjadwal['jadwalID']; ?></div></td>
+                  <td><div align="center"><?php echo $row_rsjadwal['KANama']; ?></div></td>
+                  <td><div align="center"><?php echo $row_rsjadwal['stasiunNama']; ?></div></td>
+                  <td><div align="center"><?php echo $row_rsjadwal['stasiunNama1']; ?></div></td>
+                  <td><div align="center"><?php echo $row_rsjadwal['kelasNama']; ?></div></td>
+                  <td><div align="center"><?php echo $row_rsjadwal['Harga']; ?></div></td>
+                  <td><div align="center"><?php echo $row_rsjadwal['Jam']; ?></div></td>
+                </tr>
+              </table>
+              <?php } while ($row_rsjadwal = mysql_fetch_assoc($rsjadwal)); ?>
+            </form>
+          <p align="center" class="style2">&nbsp;</p>
+          <div align="center">&nbsp;</div>
+          <table border="0" class="style1">
+  <tr>
+    <td><div align="center" class="style3">
+      <?php if ($pageNum_rsjadwal > 0) { // Show if not first page ?>
+        <a href="<?php printf("%s?pageNum_rsjadwal=%d%s", $currentPage, 0, $queryString_rsjadwal); ?>">First</a>
+        <?php } // Show if not first page ?>
+    </div></td>
+    <td><div align="center" class="style3">
+      <?php if ($pageNum_rsjadwal > 0) { // Show if not first page ?>
+        <a href="<?php printf("%s?pageNum_rsjadwal=%d%s", $currentPage, max(0, $pageNum_rsjadwal - 1), $queryString_rsjadwal); ?>">Previous</a>
+        <?php } // Show if not first page ?>
+    </div></td>
+    <td><div align="center" class="style3">
+      <?php if ($pageNum_rsjadwal < $totalPages_rsjadwal) { // Show if not last page ?>
+        <a href="<?php printf("%s?pageNum_rsjadwal=%d%s", $currentPage, min($totalPages_rsjadwal, $pageNum_rsjadwal + 1), $queryString_rsjadwal); ?>">Next</a>
+        <?php } // Show if not last page ?>
+    </div></td>
+    <td><div align="center" class="style3">
+      <?php if ($pageNum_rsjadwal < $totalPages_rsjadwal) { // Show if not last page ?>
+        <a href="<?php printf("%s?pageNum_rsjadwal=%d%s", $currentPage, $totalPages_rsjadwal, $queryString_rsjadwal); ?>">Last</a>
+        <?php } // Show if not last page ?>
+    </div></td>
+  </tr>
+</table>
+</p>
+<p align="left" class="style1">&nbsp;</p>
+<p align="left" class="style1"><a href="tambah_jadwal.php"><strong>TAMBAH JADWAL</strong></a></p>
+<p align="left" class="style1"><a href="tambah_kereta.php"><strong>TAMBAH CV L300</strong></a></p>
+<p align="left" class="style1"><a href="tambah_stasiun.php"><strong>TAMBAH TERMINAL</strong></a></p>
+<p align="left" class="style4"><a href="tambah_kelas.php">TAMBAH KELAS</a></p>
 	  </div>
         
-        <div class="clear"></div>
+      <div class="clear"></div>
     </div>
 </div>
 <div id="footer">
-	<p>&copy; GO-L300 Kelompok 6 RPL</p>
+	<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 </div>
 </body>
 </html>

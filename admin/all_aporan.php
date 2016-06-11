@@ -94,12 +94,8 @@ if (isset($_GET['pageNum_rsreservasi'])) {
 }
 $startRow_rsreservasi = $pageNum_rsreservasi * $maxRows_rsreservasi;
 
-$alter_rsreservasi = "3";
-if (isset($_GET["jadwalID"])) {
-  $alter_rsreservasi = $_GET["jadwalID"];
-}
 mysql_select_db($database_connkereta, $connkereta);
-$query_rsreservasi = sprintf("SELECT reservasi.reservasiID, reservasi.nama, reservasi.no_identitas, reservasi.identitasID, reservasi.no_telp, reservasi.email, reservasi.jadwalID, reservasi.KAID, reservasi.KAID, reservasi.stasiunID, reservasi.stasiunID1, reservasi.pembayaranID, reservasi.pemilik, reservasi.bankID, reservasi.rekening, reservasi.jumlahID, reservasi.tanggal_berangkat, jadwal.Harga, jadwal.Jam, ka.KANama, pembayaran.jenisPembayaran, stasiun.stasiunNama, stasiun1.stasiunNama1, identitas.jenisID, bank.bankNama, jumlah.jumlahNama FROM reservasi, jadwal, ka, pembayaran, stasiun, stasiun1, identitas, bank, jumlah WHERE (reservasi.identitasID=identitas.identitasID) AND (reservasi.jadwalID=jadwal.jadwalID) AND (reservasi.KAID=KA.KAID) AND (reservasi.stasiunID=stasiun.stasiunID) AND (reservasi.stasiunID1=stasiun1.stasiunID1) AND (reservasi.pembayaranID=pembayaran.pembayaranID) AND (reservasi.bankID=bank.bankID) AND (reservasi.jumlahID=jumlah.jumlahID) AND (reservasi.jadwalID=%s) ORDER BY reservasi.reservasiID ASC", GetSQLValueString($alter_rsreservasi, "int"));
+$query_rsreservasi = "SELECT reservasi.reservasiID, reservasi.nama, reservasi.no_identitas, reservasi.identitasID, reservasi.no_telp, reservasi.email, reservasi.jadwalID, reservasi.KAID, reservasi.KAID, reservasi.stasiunID, reservasi.stasiunID1, reservasi.pembayaranID, reservasi.pemilik, reservasi.bankID, reservasi.rekening, reservasi.jumlahID, reservasi.tanggal_berangkat, jadwal.Harga, jadwal.Jam, ka.KANama, pembayaran.jenisPembayaran, stasiun.stasiunNama, stasiun1.stasiunNama1, identitas.jenisID, bank.bankNama, jumlah.jumlahNama FROM reservasi, jadwal, ka, pembayaran, stasiun, stasiun1, identitas, bank, jumlah WHERE (reservasi.identitasID=identitas.identitasID) AND (reservasi.jadwalID=jadwal.jadwalID) AND (reservasi.KAID=KA.KAID) AND (reservasi.stasiunID=stasiun.stasiunID) AND (reservasi.stasiunID1=stasiun1.stasiunID1) AND (reservasi.pembayaranID=pembayaran.pembayaranID) AND (reservasi.bankID=bank.bankID) AND (reservasi.jumlahID=jumlah.jumlahID) ORDER BY reservasi.reservasiID ASC";
 $query_limit_rsreservasi = sprintf("%s LIMIT %d, %d", $query_rsreservasi, $startRow_rsreservasi, $maxRows_rsreservasi);
 $rsreservasi = mysql_query($query_limit_rsreservasi, $connkereta) or die(mysql_error());
 $row_rsreservasi = mysql_fetch_assoc($rsreservasi);
@@ -167,7 +163,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LAPORAN TRANSAKSI</title>
 <script>function confirmDelete() {  
-        return confirm("Ingin Menghapus Data ini?")  
+        return confirm("Yakin Hapus?")  
       }  </script>
 <link rel="Shortcut Icon" href="../images/train.ico">
 <link rel="stylesheet" href="../styles.css" type="text/css" />
@@ -195,7 +191,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <div id="container">
 	<div id="header">
     	<h1><a href="/"><img src="../images/footer-l.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
-      <h2>Welcome to GO-L300</h2>
+      <h2>Welcome to ticket On-Line Kereta Api</h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
@@ -203,12 +199,12 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
         	<li><a href="admin.php">Home</a></li>
             <li><a href="edit_jadwal.php">Jadwal</a></li>
           <li><a href="edit.php">EDIT DATA</a></li>
-          <li class="nav-search"></li>
-        </ul>
+<li class="nav-search"></li>
+    </ul>
   </div>
     <div id="page-intro">
-    	<h2>Welcome to ticket GO-L300</h2>
-        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO REPOT, NO NGANTRI, NO CALO"</p>
+    	<h2>Welcome to ticket On-Line Kereta Api</h2>
+        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO COPET, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
     <div id="body">
@@ -217,11 +213,11 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
             <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
             <p><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
-echo 'SEKARANG: '.date('d-m-Y')."\n";
-echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
+echo 'SEKARANG: '.date('Y-m-d')."\n";
+echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
 ?>
   </h10></p>
-          <p align="center" class="style2">LAPORAN TRANSAKSI</p>
+          <p align="center" class="style2">LAPORAN SEMUA TRANSAKSI</p>
           <p align="left" class="style1">&nbsp;
 Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rsreservasi + $maxRows_rsreservasi, $totalRows_rsreservasi) ?> of <?php echo $totalRows_rsreservasi ?> </p>
           <?php do { ?>
@@ -246,7 +242,7 @@ Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rs
                 <div align="center"><strong>TANGGAL KEBERANGKATAN</strong></div>
               </div></td>
               <td width="11%"><div align="center" class="style1">
-                <div align="center"><strong>HAPUS</strong></div>
+                <div align="center"><strong>DELETE</strong></div>
               </div></td>
             </tr>
             <tr>
@@ -260,7 +256,7 @@ Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rs
             </tr>
                           </table>
             <?php } while ($row_rsreservasi = mysql_fetch_assoc($rsreservasi)); ?>
-            <table border="0">
+          <table border="0">
             <tr>
               <td><div align="center" class="style1">
                 <?php if ($pageNum_rsreservasi > 0) { // Show if not first page ?>
@@ -296,7 +292,7 @@ Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rs
     </div>
 </div>
 <div id="footer">
-	<p>&copy; GO-L300 Kelompok 6 RPL</p>
+	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By:Alter</p>
 </div>
 </body>
 </html>
