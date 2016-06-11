@@ -341,13 +341,13 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 ?>
   </h10></p>
             <div align="left"></div>
-          <p align="left" class="style2">EDIT DAFTAR KERETA </p>
+          <p align="left" class="style2">EDIT DAFTAR CV L300</p>
           <p align="left" class="style1 searchform style4"><strong> Records <?php echo ($startRow_rska + 1) ?> to <?php echo min($startRow_rska + $maxRows_rska, $totalRows_rska) ?> of <?php echo $totalRows_rska ?> </strong></p>
           <?php do { ?>
           <table width="100%" border="0" cellspacing="0" cellpadding="3">
             <tr>
-              <td><div align="center"><strong>KA ID</strong></div></td>
-              <td><div align="center"><strong>Nama KA</strong></div></td>
+              <td><div align="center"><strong>CV ID</strong></div></td>
+              <td><div align="center"><strong>Nama CV</strong></div></td>
               <td><div align="center"><strong>EDIT</strong></div></td>
               <td><div align="center"><strong>DELETE</strong></div></td>
             </tr>
@@ -384,13 +384,13 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
               </tr>
             </table>
             </p>
-<p align="left" class="style2">EDIT DAFTAR STASIUN KEBERANGKATAN</p>
+<p align="left" class="style2">EDIT DAFTAR TERMINAL KEBERANGKATAN</p>
 <p align="left" class="style2"><span class="s style6">&nbsp;Records <?php echo ($startRow_rsstasiun + 1) ?> to <?php echo min($startRow_rsstasiun + $maxRows_rsstasiun, $totalRows_rsstasiun) ?> of <?php echo $totalRows_rsstasiun ?></span> </p>
 <?php do { ?>
             <table width="100%" border="0" cellspacing="0" cellpadding="3">
               <tr>
-                <td><div align="center"><strong>STASIUN ID</strong></div></td>
-                <td><div align="center"><strong>Nama Stasiun</strong></div></td>
+                <td><div align="center"><strong>TERMINAL ID</strong></div></td>
+                <td><div align="center"><strong>KEBERANGKATAN</strong></div></td>
                 <td><div align="center"><strong>EDIT</strong></div></td>
                 <td><div align="center"><strong>DELETE</strong></div></td>
               </tr>
@@ -427,14 +427,14 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
               </tr>
             </table>
             </p>
-<p align="left" class="style2">EDIT DAFTAR STASIUN TUJUAN</p>
+<p align="left" class="style2">EDIT DAFTAR TERMINAL TUJUAN</p>
 <p align="left" class="style1 searchform"><strong>&nbsp;
   Records <?php echo ($startRow_rsstasuin1 + 1) ?> to <?php echo min($startRow_rsstasuin1 + $maxRows_rsstasuin1, $totalRows_rsstasuin1) ?> of <?php echo $totalRows_rsstasuin1 ?> </strong></p>
 <?php do { ?>
           <table width="100%" border="0" cellspacing="0" cellpadding="3">
             <tr>
-              <td><div align="center"><strong>STASIUN ID</strong></div></td>
-              <td><div align="center"><strong>Nama Stasiun</strong></div></td>
+              <td><div align="center"><strong>TERMINAL ID</strong></div></td>
+              <td><div align="center"><strong>Tujuan</strong></div></td>
               <td><div align="center"><strong>EDIT</strong></div></td>
               <td><div align="center"><strong>DELETE</strong></div></td>
             </tr>
@@ -525,7 +525,7 @@ Records <?php echo ($startRow_rskelas + 1) ?> to <?php echo min($startRow_rskela
     </div>
 </div>
 <div id="footer">
-	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By:Alter</p>
+	<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 </div>
 </body>
 </html>
