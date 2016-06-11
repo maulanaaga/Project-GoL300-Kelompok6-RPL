@@ -90,3 +90,24 @@ delay:3000//Delay between transitions
 			</div>
 			<div class="separator"></div>
 			<div class="wrap"></div>
+			  </div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="wrap">
+				<div class="footer_logo">
+					<a href="#" title="Design Lovers">Design Lovers</a>
+				</div>
+				<ul id="footer_nav">
+					<li class="current"><a href="index.php">Home</a></li>
+				  <li><a href="jadwal1.php">JADWAL</a></li>
+				  <li><a href="berita1.php">BERITA</a></li>
+				  <li><a href="contact1.php">Contact</a></li>
+			  </ul>
+				<p id="copy">Designed by &copy;RPL-6 </p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</body> 
+</html>
