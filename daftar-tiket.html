@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html>
+	<head>
+	<title> GO-L300 </title>
+</head>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+
+<body style="background-color:#424242">
+
+<center>
+
+	<div class="jumbotron">
+			<br><center><img src ="Go2.png" width = 250 height=100/></center></br>
+			<h1  style = "text-align: center"><font size=40 color=black face=Arial >Pemesanan</font></h1>
+	</div>
+		<div class = "container">
+		<div class = "row">
+		<div class = "col-xs-offset-3 col-xs-6">
+		<div class = "well">
+	
+	<form class ="form-horizontal" action = "simpan.php " method = "post">
+		
+		<div class="form-group">
+            <label class="control-label col-xs-2">Kota Asal</label>
+            <div class="col-xs-10">
+                <input type="text" placeholder="Masukkan Nama" class="form-control" size="30" required="required"><br>
+            </div>
+        </div>
+		<div class="form-group">
+            <label class="control-label col-xs-2">Kota Tujuan</label>
+            <div class="col-xs-10">
+			<br>Pilih Kecamatan :<br>
+				<select name="kec" id="kec">
+					<option>--Pilih Kecamatan--</option>
+				</select>
+                <input type="text" placeholder="Masukkan Email" class="form-control" size="30" required="required"><br>
+            </div>
+        </div>
+				<div class="form-group">
+            <label class="control-label col-xs-2">CV. L-300</label>
+            <div class="col-xs-10">
+                <input type="text" placeholder="Masukkan Alamat" class="form-control" size="30" required="required"><br>
+            </div>
+        </div>
+		
+		<div class="form-group">
+            <label class="control-label col-xs-2">Jadwal Keberangkatan</label>
+            <div class="col-xs-10">
+                <input type="date" placeholder="Masukkan No Telepon" class="form-control" size="30" required="required"><br>
+            </div>
+        </div>
+		
+		<div class="form-group">
+            <label class="control-label col-xs-2">Jumlah Tiket</label>
+            <div class="col-xs-10">
+                <input type="password" placeholder="Masukkan Password" class="form-control" size="30" required="required"><br>
+            </div>
+        </div>
+		
+		
+                
+		<div class="form-group">
+            <div class="col-xs-offset-5 col-xs-12">
+				<button type="submit" class="btn btn-primary">Sign up</button>
+                
+			</div>
+		</div>		
+				
+	</form>
+
+
+	</div>
+	</div>
+
+	</body>
+	
+	
+</html>
+
+
+
