@@ -95,7 +95,7 @@ if (isset($_GET['totalRows_rstesti'])) {
 }
 $totalPages_rstesti = ceil($totalRows_rstesti/$maxRows_rstesti)-1;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Member Area</title>
@@ -141,7 +141,6 @@ function MM_popupMsg(msg) { //v1.0
 					<li class="current"><a href="user.php">Home</a></li>
 					<li><a href="jadwal.php">JADWAL</a>					</li>
 		    <li><a href="berita.php">BERITA</a></li>
-			<li><a href="arsip.php">ARSIP</a></li>
 			<li><a href="contact.php">Contact</a></li>
 			  </ul>
 			</div>
@@ -221,7 +220,6 @@ function MM_popupMsg(msg) { //v1.0
 					<li class="current"><a href="user.php">Home</a></li>
 				  <li><a href="jadwal.php">JADWAL</a></li>
 					<li><a href="berita.php">BERITA</a></li>
-					<li><a href="arsip.php">ARSIP</a></li>
 					<li><a href="contact.php">Contact</a></li>
 			  </ul>
 				<p id="copy">Designed by &copy;RPL-6</p>
