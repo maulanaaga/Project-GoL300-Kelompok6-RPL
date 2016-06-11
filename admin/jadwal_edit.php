@@ -28,6 +28,32 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
+$editFormAction = $_SERVER['PHP_SELF'];
+if (isset($_SERVER['QUERY_STRING'])) {
+  $editFormAction .= "?" . htmlentities($_SERVER['QUERY_STRING']);
+}
+
+if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form1")) {
+  $updateSQL = sprintf("UPDATE jadwal SET KAID=%s, stasiunID=%s, StasiunID1=%s, kelasID=%s, Harga=%s, Jam=%s WHERE jadwalID=%s",
+                       GetSQLValueString($_POST['KAID'], "int"),
+                       GetSQLValueString($_POST['stasiunID'], "int"),
+                       GetSQLValueString($_POST['StasiunID1'], "int"),
+                       GetSQLValueString($_POST['kelasID'], "int"),
+                       GetSQLValueString($_POST['Harga'], "text"),
+                       GetSQLValueString($_POST['Jam'], "date"),
+                       GetSQLValueString($_POST['jadwalID'], "int"));
+
+  mysql_select_db($database_connkereta, $connkereta);
+  $Result1 = mysql_query($updateSQL, $connkereta) or die(mysql_error());
+
+  $updateGoTo = "update_sukses.php";
+  if (isset($_SERVER['QUERY_STRING'])) {
+    $updateGoTo .= (strpos($updateGoTo, '?')) ? "&" : "?";
+    $updateGoTo .= $_SERVER['QUERY_STRING'];
+  }
+  header(sprintf("Location: %s", $updateGoTo));
+}
+
 $currentPage = $_SERVER["PHP_SELF"];
 
 mysql_select_db($database_connkereta, $connkereta);
@@ -67,8 +93,12 @@ if (isset($_GET['pageNum_rsjadwal'])) {
 }
 $startRow_rsjadwal = $pageNum_rsjadwal * $maxRows_rsjadwal;
 
+$tes_rsjadwal = "1";
+if (isset($_GET["jadwalID"])) {
+  $tes_rsjadwal = $_GET["jadwalID"];
+}
 mysql_select_db($database_connkereta, $connkereta);
-$query_rsjadwal = "SELECT jadwal.jadwalID, jadwal.KAID, jadwal.stasiunID, jadwal.StasiunID1, jadwal.kelasID, jadwal.Harga, jadwal.Jam, ka.KANama, kelas.kelasNama, stasiun.stasiunNama, stasiun1.stasiunNama1 FROM jadwal, ka, kelas, stasiun, stasiun1 WHERE (jadwal.KAID=KA.KAID) AND (jadwal.stasiunID=stasiun.stasiunID) AND (jadwal.stasiunID1=stasiun1.stasiunID1) AND (jadwal.kelasID=kelas.kelasID) ORDER BY jadwal.jadwalID ASC";
+$query_rsjadwal = sprintf("SELECT jadwal.jadwalID, jadwal.KAID, jadwal.stasiunID, jadwal.StasiunID1, jadwal.kelasID, jadwal.Harga, jadwal.Jam, ka.KANama, kelas.kelasNama, stasiun.stasiunNama, stasiun1.stasiunNama1 FROM jadwal, ka, kelas, stasiun, stasiun1 WHERE (jadwal.KAID=KA.KAID) AND (jadwal.stasiunID=stasiun.stasiunID) AND (jadwal.stasiunID1=stasiun1.stasiunID1) AND (jadwal.kelasID=kelas.kelasID) AND (jadwal.jadwalID=%s) ORDER BY jadwal.jadwalID ASC", GetSQLValueString($tes_rsjadwal, "int"));
 $query_limit_rsjadwal = sprintf("%s LIMIT %d, %d", $query_rsjadwal, $startRow_rsjadwal, $maxRows_rsjadwal);
 $rsjadwal = mysql_query($query_limit_rsjadwal, $connkereta) or die(mysql_error());
 $row_rsjadwal = mysql_fetch_assoc($rsjadwal);
@@ -165,28 +195,15 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>LAPORAN TRANSAKSI</title>
-<script>function confirmDelete() {  
-        return confirm("Ingin Menghapus Data ini?")  
+<title>EDIT JADWAL</title>
+<script>function confirmLogout() {  
+        return confirm("Yakin Logout?")  
       }  </script>
 <link rel="Shortcut Icon" href="../images/train.ico">
 <link rel="stylesheet" href="../styles.css" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {color: #FF0000}
-.style2 {
-	color: #FF0000;
-	font-size: 16px;
-	font-weight: bold;
-}
-.style6 {
-	color: #0000FF;
-	font-weight: bold;
-}
-.style7 {
-	color: #FF3399;
-	font-weight: bold;
-}
 -->
 </style>
 </head>
@@ -204,95 +221,97 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
             <li><a href="edit_jadwal.php">Jadwal</a></li>
           <li><a href="edit.php">EDIT DATA</a></li>
           <li class="nav-search"></li>
-        </ul>
+    </ul>
   </div>
     <div id="page-intro">
     	<h2>Welcome to ticket GO-L300</h2>
-        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO REPOT, NO NGANTRI, NO CALO"</p>
+        <p>Membuat kemudahan dan kenyamanan dalam pemesanan Ticket L300, "NO REPOT, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
     <div id="body">
 		<div id="content">
-			<h2><strong>Transaksi Penjualan Tiket</strong></h2>
-            <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
-            <p><?php 
+			<h2><strong>UPDATE DATA</strong></h2>
+          <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
+            <p align="left"><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
 echo 'SEKARANG: '.date('d-m-Y')."\n";
 echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 ?>
   </h10></p>
-          <p align="center" class="style2">LAPORAN TRANSAKSI</p>
-          <p align="left" class="style1">&nbsp;
-Records <?php echo ($startRow_rsreservasi + 1) ?> to <?php echo min($startRow_rsreservasi + $maxRows_rsreservasi, $totalRows_rsreservasi) ?> of <?php echo $totalRows_rsreservasi ?> </p>
-          <?php do { ?>
-          <table width="100%" border="0" cellspacing="0" cellpadding="3">
-            <tr>
-              <td width="20%"><div align="center" class="style1">
-                <div align="center"><strong>RESERVASI ID</strong></div>
-              </div></td>
-              <td width="10%"><div align="center" class="style1">
-                <div align="center"><strong>NAMA</strong></div>
-              </div></td>
-              <td width="12%"><div align="center" class="style1">
-                <div align="center"><strong>NO.TELP</strong></div>
-              </div></td>
-              <td width="11%"><div align="center" class="style1">
-                <div align="center"><strong>E-MAIL</strong></div>
-              </div></td>
-              <td width="16%"><div align="center" class="style1">
-                <div align="center"><strong>JADWAL ID</strong></div>
-              </div></td>
-              <td width="20%"><div align="center" class="style1">
-                <div align="center"><strong>TANGGAL KEBERANGKATAN</strong></div>
-              </div></td>
-              <td width="11%"><div align="center" class="style1">
-                <div align="center"><strong>HAPUS</strong></div>
-              </div></td>
-            </tr>
-            <tr>
-              <td><div align="center" class="style7"><?php echo $row_rsreservasi['reservasiID']; ?></div></td>
-              <td><div align="center" class="style6"><?php echo $row_rsreservasi['nama']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['no_telp']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['email']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['jadwalID']; ?></div></td>
-              <td><div align="center"><?php echo $row_rsreservasi['tanggal_berangkat']; ?></div></td>
-              <td><div align="center"><a href="delete_reservasi.php?reservasiID=<?php echo $row_rsreservasi['reservasiID']; ?>"onclick="return confirmDelete()">DELETE</a></div></td>
-            </tr>
-                          </table>
-            <?php } while ($row_rsreservasi = mysql_fetch_assoc($rsreservasi)); ?>
-            <table border="0">
-            <tr>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi > 0) { // Show if not first page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, 0, $queryString_rsreservasi); ?>">First</a>
-                <?php } // Show if not first page ?>
-              </div></td>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi > 0) { // Show if not first page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, max(0, $pageNum_rsreservasi - 1), $queryString_rsreservasi); ?>">Previous</a>
-                <?php } // Show if not first page ?>
-              </div></td>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi < $totalPages_rsreservasi) { // Show if not last page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, min($totalPages_rsreservasi, $pageNum_rsreservasi + 1), $queryString_rsreservasi); ?>">Next</a>
-                <?php } // Show if not last page ?>
-              </div></td>
-              <td><div align="center" class="style1">
-                <?php if ($pageNum_rsreservasi < $totalPages_rsreservasi) { // Show if not last page ?>
-                <a href="<?php printf("%s?pageNum_rsreservasi=%d%s", $currentPage, $totalPages_rsreservasi, $queryString_rsreservasi); ?>">Last</a>
-                <?php } // Show if not last page ?>
-              </div></td>
-            </tr>
-          </table>
-          </p>
-<p align="left" class="style1">&nbsp;</p>          
+            <div align="left"></div>
+          <form action="<?php echo $editFormAction; ?>" method="post" id="form1">
+            <table>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>Jadwal ID:</strong></div></td>
+                <td><?php echo $row_rsjadwal['jadwalID']; ?></td>
+              </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>NAMA CV:</strong></div></td>
+                <td><input type="text" name="KAID" value="<?php echo htmlentities($row_rsjadwal['KANama']); ?>" size="32" /></td>
+              </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>Keberangkatan:</strong></div></td>
+                <td><select name="stasiunID">
+                    <?php 
+do {  
+?>
+                    <option value="<?php echo $row_rsstasiun['stasiunID']?>" <?php if (!(strcmp($row_rsstasiun['stasiunID'], htmlentities($row_rsjadwal['stasiunID'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";} ?>><?php echo $row_rsstasiun['stasiunNama']?></option>
+                    <?php
+} while ($row_rsstasiun = mysql_fetch_assoc($rsstasiun));
+?>
+                  </select>                </td>
+              </tr>
+              <tr> </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>Tujuan:</strong></div></td>
+                <td><select name="StasiunID1">
+                    <?php 
+do {  
+?>
+                    <option value="<?php echo $row_rsstasuin1['stasiunID1']?>" <?php if (!(strcmp($row_rsstasuin1['stasiunID1'], htmlentities($row_rsjadwal['StasiunID1'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";} ?>><?php echo $row_rsstasuin1['stasiunNama1']?></option>
+                    <?php
+} while ($row_rsstasuin1 = mysql_fetch_assoc($rsstasuin1));
+?>
+                  </select>                </td>
+              </tr>
+              <tr> </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>Kelas:</strong></div></td>
+                <td><select name="kelasID">
+                    <?php 
+do {  
+?>
+                    <option value="<?php echo $row_rskelas['kelasID']?>" <?php if (!(strcmp($row_rskelas['kelasID'], htmlentities($row_rsjadwal['kelasID'], ENT_COMPAT, 'utf-8')))) {echo "SELECTED";} ?>><?php echo $row_rskelas['kelasNama']?></option>
+                    <?php
+} while ($row_rskelas = mysql_fetch_assoc($rskelas));
+?>
+                  </select>                </td>
+              </tr>
+              <tr> </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>Harga:</strong></div></td>
+                <td><input type="text" name="Harga" value="<?php echo htmlentities($row_rsjadwal['Harga'], ENT_COMPAT, 'utf-8'); ?>" size="32" /></td>
+              </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"><strong>Jam:</strong></div></td>
+                <td><input type="text" name="Jam" value="<?php echo htmlentities($row_rsjadwal['Jam'], ENT_COMPAT, 'utf-8'); ?>" size="32" /></td>
+              </tr>
+              <tr valign="baseline">
+                <td align="right"><div align="left"></div></td>
+                <td><input type="submit" value="Update record" /></td>
+              </tr>
+            </table>
+            <input type="hidden" name="MM_update" value="form1" />
+            <input type="hidden" name="jadwalID" value="<?php echo $row_rsjadwal['jadwalID']; ?>" />
+          </form>
+          <p>&nbsp;</p>
           <div align="center"></div>
           </p>
 <p>&nbsp;</p>
           <p align="center" class="style1">&nbsp;</p>
 	  </div>
         
-        <div class="clear"></div>
+      <div class="clear"></div>
     </div>
 </div>
 <div id="footer">
