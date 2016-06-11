@@ -67,3 +67,26 @@ delay:3000//Delay between transitions
 				</div>
 			</div>
 		</div>
+		<div class="separator"></div>
+		<div class="columns">
+			<div class="wrap">
+				<div class="oneOfThree first">
+				  <div id="log">
+                    <h3>Pendaftaran berhasil</h3>
+				    
+                    <p align="center"><strong></strong></p>
+                    <!--<p align="center" class="style2"><a href="index.php">LOGIN</a></p>-->
+                    <p>&nbsp;</p>
+                    <br />
+                    <div id="left_bot"></div>
+			      </div>
+				  <h2 align="center">&nbsp;</h2>
+			  </div>
+			  <p>&nbsp;</p>
+<div class="twoOfThree last headline">
+					<h2>Terimakasih telah mendaftar</h2>
+					<p>Nikmati segala kemudahan yang ada di situs GO-L300, Silahkan login <a href="index.php">disini</a></p>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<div class="wrap"></div>
