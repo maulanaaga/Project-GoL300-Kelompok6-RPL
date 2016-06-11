@@ -40,3 +40,30 @@ delay:3000//Delay between transitions
 			  </ul>
 			</div>
 		</div>
+		<div class="separator"></div>
+		<div id="slider_container">
+			<div class="wrap">
+				<div id="coin-slider">
+					<a href="#">
+						<img src="images/f1.jpg" alt="" />
+						<span>Selamat Datang di GO-L300</span>
+					</a>
+					<a href="#">
+						<img src="images/f2.jpg" alt="" />
+						<span><strong>Kami siap melayani Anda</strong> Cepat, Tepat, Aman , dan terjangkau </span>
+					</a>
+					<a href="#">
+						<img src="images/f3.jpg" alt="" />
+						<span><strong>Interior yang Nyaman</strong> kami manjakan anda dengan segala fasilitas yang membuat anda nyaman </span>
+					</a>
+					<a href="#">
+						<img src="images/f4.jpg" alt="" />
+						<span><strong>Kami Siap melayani anda.</strong> Cepat, Tepat, Aman , dan terjangkau </span>
+					</a>
+					<a href="#">
+						<img src="images/f5.jpg" alt="" />
+						<span><strong>Interior yang Nyaman</strong> kami manjakan anda dengan segala fasilitas yang membuat anda nyaman </span>
+					</a>
+				</div>
+			</div>
+		</div>
