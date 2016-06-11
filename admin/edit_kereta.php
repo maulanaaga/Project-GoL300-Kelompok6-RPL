@@ -242,11 +242,11 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
           <form action="<?php echo $editFormAction; ?>" method="post" id="form1">
             <table>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>KA ID:</strong></div></td>
+                <td align="right"><div align="left"><strong>CV ID:</strong></div></td>
                 <td><?php echo $row_rska['KAID']; ?></td>
               </tr>
               <tr valign="baseline">
-                <td align="right"><div align="left"><strong>Nama KA:</strong></div></td>
+                <td align="right"><div align="left"><strong>Nama CV:</strong></div></td>
                 <td><input type="text" name="KANama" value="<?php echo htmlentities($row_rska['KANama'], ENT_COMPAT, 'utf-8'); ?>" size="32" /></td>
               </tr>
               <tr valign="baseline">
@@ -267,7 +267,7 @@ echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
     </div>
 </div>
 <div id="footer">
-	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By:Alter</p>
+	<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 </div>
 </body>
 </html>
