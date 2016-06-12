@@ -85,7 +85,7 @@ echo $mm_xsl->Transform();
 		<div class="container">
 			<div class="wrap">
 				<div class="footer_logo">
-					<a href="user.php" title="Design Lovers">Design</a>				</div>
+					</div>
 		  <ul id="footer_nav">
 					<li class="current"><a href="user.php">Home</a></li>
 				  <li><a href="jadwal.php">JADWAL</a></li>
@@ -93,7 +93,7 @@ echo $mm_xsl->Transform();
 			<li><a href="arsip.php">ARSIP</a></li>
 			<li><a href="contact.php">Contact</a></li>
 			  </ul>
-				<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
+				<p><br><br><br><br><br>&copy; GO-L300 KELOMPOK 6 RPL</br></p>
 			</div>
 		</div>
 		<div class="clear"></div>
