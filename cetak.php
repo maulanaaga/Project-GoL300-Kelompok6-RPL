@@ -161,7 +161,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
 <body>
 <div id="container">
 	<div id="header">
-    	<h1><a href="/"><img src="images/Go2.png" alt="" width="265" height="55" longdesc="images/Go2.png" /></a></h1>
+    	<h1><a href="/"><img src="images/Go1.png" alt="" width="200" height="55" longdesc="images/Go1.png" /></a></h1>
       <h2>Welcome to ticket GO-L300</h2>
         <div class="clear"></div>
     </div>
