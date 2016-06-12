@@ -93,7 +93,7 @@ echo $mm_xsl->Transform();
 			<li><a href="arsip.php">ARSIP</a></li>
 			<li><a href="contact.php">Contact</a></li>
 			  </ul>
-				<p id="copy">GO-L300 KELOMPOK 6 RPL</p>
+				<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 			</div>
 		</div>
 		<div class="clear"></div>
