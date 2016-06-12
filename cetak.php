@@ -150,9 +150,9 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
 .style1 {color: #FF0000}
 .style3 {color: #FF0000; font-weight: bold; }
 .style4 {
-	color: #33FF00;
-	font-weight: bold;
-	font-size: 18px;
+  color: #33FF00;
+  font-weight: bold;
+  font-size: 18px;
 }
 -->
 </style>
@@ -160,8 +160,8 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
 
 <body>
 <div id="container">
-	<div id="header">
-    	<h1><a href="/"><img src="images/Go1.png" alt="" width="200" height="55" longdesc="images/Go1.png" /></a></h1>
+  <div id="header">
+      <h1><a href="/"><img src="Go1.png" alt="" width="200" height="55" longdesc="images/Go1.png" /></a></h1>
       <h2>Welcome to ticket GO-L300</h2>
         <div class="clear"></div>
     </div>
@@ -173,10 +173,10 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
         <p>&nbsp;</p>
     </div>
     <div id="body">
-		<div id="content">
-			<h2>&nbsp;</h2>
-			<h2><strong>FORM TIKET</strong></h2>
-		  <p><img src="images/Go2.png" alt="" width="265" height="55" longdesc="images/Go2.png" /></p>
+    <div id="content">
+      <h2>&nbsp;</h2>
+      <h2><strong>FORM TIKET</strong></h2>
+      <p><img src="Go2.png" alt="" width="265" height="55" longdesc="images/Go2.png" /></p>
             <p class="style1">Selamat FORM tiket anda telah sukses.!!</p>
             <table width="100%" border="0" cellspacing="0" cellpadding="3">
               <tr>
