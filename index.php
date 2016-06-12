@@ -142,7 +142,8 @@ function MM_popupMsg(msg) { //v1.0
 					<li class="current"><a href="index.php">Home</a></li>
 				  <li><a href="jadwal1.php">jadwaL</a></li>
                   <li><a href="berita1.php">berita</a></li>
-					<li><a href="contact1.php">Contact</a></li>
+                  <li><a href="arsip1.php">Arsip</a></li>
+				  <li><a href="contact1.php">Contact</a></li>
 			  </ul>
 			</div>
 		</div>
@@ -225,6 +226,7 @@ function MM_popupMsg(msg) { //v1.0
 					<li class="current"><a href="index.php">Home</a></li>
 					<li><a href="jadwal1.php">JADWAL</a></li>
 					<li><a href="berita1.php">BERITA</a></li>
+					<li><a href="arsip1.php">ARSIP</a></li>
 					<li><a href="contact1.php">Contact</a></li>
 			  </ul>
 				<p id="copy">INF14 &copy;RPL-6 </p>
