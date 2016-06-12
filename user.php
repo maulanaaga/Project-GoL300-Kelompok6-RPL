@@ -147,8 +147,9 @@ delay:3000//Delay between transitions
 					<a href="user.php" title="Design Lovers">Design Lovers</a>				</div>
 		  <ul id="nav">
 					<li class="current"><a href="user.php">Home</a></li>
-				  <li><a href="jadwal.php">JADWAL</a>					</li>
+				  <li><a href="jadwal.php">JADWAL</a></li>
 		    <li><a href="berita.php">BERITA</a></li>
+        <li><a href="arsip.php">ARSIP</a></li>
 			<li><a href="contact.php">Contact</a></li>
 			  </ul>
 			</div>
