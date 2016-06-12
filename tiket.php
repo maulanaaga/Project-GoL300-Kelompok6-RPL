@@ -132,7 +132,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
 <div id="container">
   <div id="header">
       <h1><a href="/"><img src="Go1.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
-      <h2>Welcome to ticket GO-L300/h2>
+      <h2>Welcome to ticket GO-L300 </h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
@@ -237,7 +237,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
               </tr>
             </table>
             <p class="style1">NB: </p>
-            <p class="style1">Silahkan lakukan pembayaran, lalu bawa bukti pembayaran dan form di stasiun keberangkatan, untuk mendapatkan no.tempat duduk.</p>
+            <p class="style1">Silahkan lakukan pembayaran, lalu bawa bukti pembayaran dan form di terminal keberangkatan, untuk mendapatkan no.tempat duduk.</p>
             <input type="button" name="btn_cetak" onClick="cetak(<?php echo $param;?>)" value="Cetak"></p>
     </div>
         

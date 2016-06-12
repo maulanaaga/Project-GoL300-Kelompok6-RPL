@@ -266,18 +266,18 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
             <li>
               <h4 align="center"><span>KETERANGAN BANK</span></h4>
               <ul class="blocklist">
-                <li><a href="file:///D|/kuliah/php/Html Template/fascin/fascin/index.html"><strong>Rek BCA A.N gol300</strong></a></li>
+                <li><a href="file:///D|/kuliah/php/Html Template/fascin/fascin/index.html"><strong>Rek BCA A.N GO-L300</strong></a></li>
                 <li><a href="file:///D|/kuliah/php/Html Template/fascin/fascin/examples.html">No. Rekening: 1234567890</a></li>
-                <li><a href="#"><strong>Rek BNI A.N gol300</strong></a></li>
+                <li><a href="#"><strong>Rek BNI A.N GO-L300</strong></a></li>
                 <li><a href="#">No. Rekening: 1234567890</a>
                     <li>
-                    <li><a href="#"><strong>Rek Mandiri A.N gol300</strong></a>
+                    <li><a href="#"><strong>Rek Mandiri A.N GO-L300</strong></a>
                     <li><li><a href="#">No. Rekening: 1234567890</a>
                     <li>
-                    <li><a href="#"><strong>Rek Muammalat A.N gol300</strong></a>
+                    <li><a href="#"><strong>Rek Muammalat A.N GO-L300</strong></a>
                     <li><li><a href="#">No. Rekening: 1234567890</a>
                     <li>
-                    <li><a href="#"><strong>Rek Bukopin A.N gol300</strong></a>
+                    <li><a href="#"><strong>Rek Bukopin A.N GO-L300</strong></a>
                     <li><li><a href="#">No. Rekening: 1234567890</a>
                     <li></li>
                   </ul>
@@ -288,7 +288,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
                         <div align="center"><strong>REKENING ONLINE</strong></div>
                     </li>
                     <li><strong>Paypal Account</strong></li>
-                    <li>gol300@yahoo.com</li>
+                    <li>GO-L300@yahoo.com</li>
                   </ul>
                 </li>
               </ul>
