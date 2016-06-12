@@ -38,7 +38,7 @@ delay:3000//Delay between transitions
 		</div>
 		<div class="separator"></div>
 		<div class="wrap">
-				<div class="main intro">Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, &quot;NO COPET, NO NGANTRI, NO CALO&quot;</div>
+				<div class="main intro">Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, &quot;NO NGANTRI, NO CALO, GA PAKE RIBET&quot;</div>
 				
   <div class="sidebar" id="search_box">
     <label for="search">Input Tujuan Anda...</label>
@@ -84,7 +84,7 @@ delay:3000//Delay between transitions
 			<li><a href="arsip.php">ARSIP</a></li>
 			<li><a href="contact.php">Contact</a></li>
 			  </ul>
-				<p id="copy">Designed by &copy;alter</p>
+				<p id="copy">Designed by &copy;RPL-6</p>
 			</div>
 		</div>
 		<div class="clear"></div>
