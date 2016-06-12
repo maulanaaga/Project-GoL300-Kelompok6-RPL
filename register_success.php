@@ -98,10 +98,10 @@ if (isset($_POST['text1'])) {
   }
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Welcome To GO-L300</title>
+<title>Selamat Datang di GO-L300</title>
 <link rel="Shortcut Icon" href="images/train.ico">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -119,12 +119,10 @@ delay:3000//Delay between transitions
 <script type="text/javascript" src="js/function.js"></script>
 <style type="text/css">
 <!--
-.style1 {
+.style2 {
 	color: #FF0000;
 	font-weight: bold;
 }
-.style2 {color: #FF0000}
--->
 </style>
 </head>
 <body class="noJs">
@@ -137,8 +135,7 @@ delay:3000//Delay between transitions
 				<ul id="nav">
 					<li class="current"><a href="index.php">Home</a></li>
 				  <li><a href="jadwal1.php">jadwaL</a></li>
-                    <li><a href="berita1.php">berita</a></li>
-				  <li><a href="arsip1.php">ARSIP</a></li>
+                  <li><a href="berita1.php">berita</a></li>
 				  <li><a href="contact1.php">Contact</a></li>
 			  </ul>
 			</div>
@@ -149,15 +146,15 @@ delay:3000//Delay between transitions
 				<div id="coin-slider">
 					<a href="#">
 						<img src="images/f1.jpg" alt="" />
-						<span>Welcome To Kereta On-Line</span>
+						<span>Selamat Datang di GO-L300</span>
 					</a>
 					<a href="#">
 						<img src="images/f2.jpg" alt="" />
-						<span><strong>Argo Bromo.</strong> Jakarta-Surabaya, hanya 5 jam. </span>
+						<span><strong>Kami siap melayani Anda</strong> Cepat, Tepat, Aman , dan terjangkau </span>
 					</a>
 					<a href="#">
 						<img src="images/f3.jpg" alt="" />
-						<span><strong>Pemandangan yang indah</strong> Nikmati perjalanan dengan pemandangan yang asri dan nyaman </span>
+						<span><strong>Interior yang Nyaman</strong> kami manjakan anda dengan segala fasilitas yang membuat anda nyaman </span>
 					</a>
 					<a href="#">
 						<img src="images/f4.jpg" alt="" />
@@ -175,38 +172,10 @@ delay:3000//Delay between transitions
 			<div class="wrap">
 				<div class="oneOfThree first">
 				  <div id="log">
-                    <h3>pendaftaran Pengguna</h3>
+                    <h3>Pendaftaran berhasil</h3>
 				    
-                    <form action="<?php echo $editFormAction; ?>" method="post" name="form1" id="form1">
-                      <table width="109%" align="center">
-                        <tr valign="baseline">
-                          <td nowrap="nowrap" align="right">Username:</td>
-                          <td><input type="text" name="username" value="" size="20" /></td>
-                        </tr>
-                        <tr valign="baseline">
-                          <td nowrap="nowrap" align="right">Password:</td>
-                          <td><input type="text" name="password" value="" size="20" /></td>
-                        </tr>
-                                                <tr valign="baseline">
-                          <td nowrap="nowrap" align="right">Nomor HP:</td>
-                          <td><input type="text" name="nomorhp" value="" size="20" /></td>
-                        </tr>
-                        <tr valign="baseline">
-                          <td nowrap="nowrap" align="right">Email:</td>
-                          <td><input type="text" name="email" value="" size="20" /></td>
-                        </tr>
-                        <tr valign="baseline">
-                          <td nowrap="nowrap" align="right">Alamat:</td>
-                          <td><input type="text" name="alamat" value="" size="20" /></td>
-                        </tr>
-                        <tr valign="baseline">
-                          <td nowrap="nowrap" align="right">&nbsp;</td>
-                          <td><input type="submit" value="Daftar" />
-                          <input name="Reset" type="reset" value="Reset" /></td>
-                        </tr>
-                      </table>
-                      <input type="hidden" name="MM_insert" value="form1" />
-                    </form>
+                    <p align="center"><strong></strong></p>
+                    <!--<p align="center" class="style2"><a href="index.php">LOGIN</a></p>-->
                     <p>&nbsp;</p>
                     <br />
                     <div id="left_bot"></div>
@@ -215,13 +184,13 @@ delay:3000//Delay between transitions
 			  </div>
 			  <p>&nbsp;</p>
 <div class="twoOfThree last headline">
-					<h1>Selamat Datang di GO-L300</h1>
-					<p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, &quot;NO NGANTRI, NO CALO, Ga Pake Ribet&quot;</p>
+					<h2>Terimakasih telah mendaftar</h2>
+					<p>Nikmati segala kemudahan yang ada di situs GO-L300, Silahkan login <a href="index.php">disini</a></p>
 				</div>
 			</div>
 			<div class="separator"></div>
 			<div class="wrap"></div>
-  </div>
+			  </div>
 	</div>
 	<div id="footer">
 		<div class="container">
