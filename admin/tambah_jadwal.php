@@ -194,7 +194,7 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 <script>function confirmLogout() {  
         return confirm("Yakin Logout?")  
       }  </script>
-<link rel="Shortcut Icon" href="../images/train.ico">
+<link rel="Shortcut Icon" href="images/icon.ico">
 <link rel="stylesheet" href="../styles.css" type="text/css" />
 <style type="text/css">
 <!--
@@ -205,28 +205,28 @@ $queryString_rsjadwal = sprintf("&totalRows_rsjadwal=%d%s", $totalRows_rsjadwal,
 
 <body>
 <div id="container">
-	<div id="header">
-    	<h1><a href="/"><img src="../images/footer-l.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
+  <div id="header">
+      <h1><a href="/"><img src="images/Go1.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
       <h2>Welcome to GO-L300</h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
-    	<ul>
-        	<li><a href="admin.php">Home</a></li>
+      <ul>
+          <li><a href="admin.php">Home</a></li>
             <li><a href="edit_jadwal.php">Jadwal</a></li>
           <li><a href="edit.php">EDIT DATA</a></li>
           <li class="nav-search"></li>
     </ul>
   </div>
     <div id="page-intro">
-    	<h2>Welcome to ticket GO-L300</h2>
+      <h2>Welcome to ticket GO-L300</h2>
         <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, "NO REPOT, NO NGANTRI, NO CALO"</p>
         <p>&nbsp;</p>
   </div>
     <div id="body">
-		<div id="content">
-			<h2><strong>TAMBAH DATA</strong></h2>
-          <p><img src="../images/footer-l2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
+    <div id="content">
+      <h2><strong>TAMBAH DATA</strong></h2>
+          <p><img src="images/Go2.png" alt="" width="265" height="55" longdesc="images/footer-l2.png" /></p>
             <p align="left"><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
 echo 'SEKARANG: '.date('d-m-Y')."\n";
@@ -307,13 +307,13 @@ do {
           </p>
 <p>&nbsp;</p>
           <p align="center" class="style1">&nbsp;</p>
-	  </div>
+    </div>
         
       <div class="clear"></div>
     </div>
 </div>
 <div id="footer">
-	<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
+  <p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 </div>
 </body>
 </html>
