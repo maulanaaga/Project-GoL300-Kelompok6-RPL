@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rstrayek" value="name:trayekID;datatype:int,name:trayekName;datatype:string" />
+	<infoitem key="UD_rsidentitas" value="name:identitasID;datatype:int,name:nama;datatype:string,name:no_identitas;datatype:string,name:jenisIdentitas;datatype:string,name:Alamat;datatype:string,name:notelp;datatype:int" />
+	<infoitem key="UD_rsusers" value="name:userID;datatype:int,name:username;datatype:string,name:password;datatype:string,name:accessLevel;datatype:string" />
+	<infoitem key="UD_rstesti" value="name:testiID;datatype:int,name:username;datatype:string,name:pesan;datatype:string" />
+</info>
