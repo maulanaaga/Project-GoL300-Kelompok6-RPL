@@ -132,7 +132,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
 <div id="container">
 	<div id="header">
     	<h1><a href="/"><img src="images/footer-l.png" alt="" width="94" height="89" longdesc="images/200px-PT.KA.svg.png" /></a></h1>
-      <h2>Welcome to ticket On-Line Kereta Api</h2>
+      <h2>Welcome to ticket GO-L300/h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
@@ -146,8 +146,8 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
     </ul>
     </div>
     <div id="page-intro">
-    	<h2>Welcome to ticket On-Line Kereta Api</h2>
-        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket kereta api, "NO COPET, NO NGANTRI, NO CALO"
+    	<h2>Welcome to ticket GO-L300</h2>
+        <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L300, "NO REPOT, NO NGANTRI, NO CALO"
 
 
 
@@ -246,18 +246,18 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
             <li>
               <h4 align="center"><span>KETERANGAN BANK</span></h4>
               <ul class="blocklist">
-                <li><a href="file:///D|/kuliah/php/Html Template/fascin/fascin/index.html"><strong>Rek BCA A.N keretaonline</strong></a></li>
+                <li><a href="file:///D|/kuliah/php/Html Template/fascin/fascin/index.html"><strong>Rek BCA A.N GO-L300</strong></a></li>
                 <li><a href="file:///D|/kuliah/php/Html Template/fascin/fascin/examples.html">No. Rekening: 1234567890</a></li>
-                <li><a href="#"><strong>Rek BNI A.N keretaonline</strong></a></li>
+                <li><a href="#"><strong>Rek BNI A.N GO-L300</strong></a></li>
                 <li><a href="#">No. Rekening: 1234567890</a>
                     <li>
-                    <li><a href="#"><strong>Rek Mandiri A.N keretaonline</strong></a>
+                    <li><a href="#"><strong>Rek Mandiri A.N GO-L300</strong></a>
                     <li><li><a href="#">No. Rekening: 1234567890</a>
                     <li>
-                    <li><a href="#"><strong>Rek Muammalat A.N keretaonline</strong></a>
+                    <li><a href="#"><strong>Rek Muammalat A.N GO-L300</strong></a>
                     <li><li><a href="#">No. Rekening: 1234567890</a>
                     <li>
-                    <li><a href="#"><strong>Rek Bukopin A.N keretaonline</strong></a>
+                    <li><a href="#"><strong>Rek Bukopin A.N GO-L300</strong></a>
                     <li><li><a href="#">No. Rekening: 1234567890</a>
                     <li></li>
                   </ul>
@@ -268,7 +268,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
                         <div align="center"><strong>REKENING ONLINE</strong></div>
                     </li>
                     <li><strong>Paypal Account</strong></li>
-                    <li>kereta_online@yahoo.com</li>
+                    <li>GO-L300@yahoo.com</li>
                   </ul>
                 </li>
               </ul>
@@ -278,7 +278,7 @@ window.open("cetak.php?reservasiID="+reservasiID,"cetak","width=500,heigth=500,s
     </div>
 </div>
 <div id="footer">
-	<p>&copy; keretaonline 2010. Website Design by <a href="http://www.spyka.net">Free CSS Templates</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a> modified By: Alter</p>
+	<p>&copy; GO-L300 KELOMPOK 6 RPL</p>
 </div>
 </body>
 </html>
