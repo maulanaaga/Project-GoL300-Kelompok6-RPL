@@ -144,14 +144,14 @@ function MM_validateForm() { //v4.0
 
 <body>
 <div id="container">
-	<div id="header">
-    	<h1><a href="/"><img src="images/Go1.png" alt="" width="200" height="55" longdesc="images/Go1.png" /></a></h1>
+  <div id="header">
+      <h1><a href="/"><img src="Go1.png" alt="" width="200" height="55" longdesc="images/Go1.png" /></a></h1>
       <h2>Welcome to ticket GO-L300</h2>
         <div class="clear"></div>
     </div>
 <div id="nav">
-    	<ul>
-        	<li><a href="user.php">Home</a></li>
+      <ul>
+          <li><a href="user.php">Home</a></li>
             <li><a href="jadwal.php">Jadwal</a></li>
           <li><a href="berita.php">Berita</a></li>
             <li><a href="arsip.php">Arsip</a></li>
@@ -160,7 +160,7 @@ function MM_validateForm() { //v4.0
     </ul>
     </div>
     <div id="page-intro">
-    	<h2>Welcome to ticket GO-L300</h2>
+      <h2>Welcome to ticket GO-L300</h2>
         <p>Membuat kemudahan dan kenyamanan dalam pemesanan tiket L-300, "NO COPET, NO NGANTRI, NO CALO"
 
 
@@ -168,9 +168,9 @@ function MM_validateForm() { //v4.0
 </p>
     </div>
     <div id="body">
-		<div id="content">
-			<h2><strong>Tracking Ticket</strong></h2>
-            <p><img src="images/Go2.png" alt="" width="265" height="55" longdesc="Go2.png" /></p>
+    <div id="content">
+      <h2><strong>Tracking Ticket</strong></h2>
+            <p><img src="Go2.png" alt="" width="265" height="55" longdesc="Go2.png" /></p>
             <form method="get" class="searchform" action="cetak.php?reservasiID=<?php echo $row_rsreservasi['reservasiID']; ?>" >
               <p align="center">
                 <input name="email" type="text" class="s" id="email" onblur="MM_validateForm('email','','NisEmail');return document.MM_returnValue" value="" size="35" />
@@ -179,11 +179,11 @@ function MM_validateForm() { //v4.0
           </form>
             <p class="style1">*Input email anda untuk melihat detail tiket</p>
           <p>&nbsp;</p>
-	  </div>
+    </div>
         
         <p>&nbsp;</p>
 <div class="sidebar">
-            <ul>	
+            <ul>  
                <li>
                     <h4><span>Navigate</span></h4>
                     <ul class="blocklist">
@@ -197,11 +197,11 @@ function MM_validateForm() { //v4.0
                 
             </ul> 
         </div>
-    	<div class="clear"></div>
+      <div class="clear"></div>
     </div>
 </div>
 <div id="footer">
-	<p>&copy; GO-L300 KELOMPOK 6 RPL </p>
+  <p>&copy; GO-L300 KELOMPOK 6 RPL </p>
 </div>
 </body>
 </html>
