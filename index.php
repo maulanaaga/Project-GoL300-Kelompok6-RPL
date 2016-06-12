@@ -202,17 +202,7 @@ function MM_popupMsg(msg) { //v1.0
 	
                     <div id="left_bot"></div>
 			      </div>
-			<!--	  <h2 align="left">Tes</h2>
-				  <?php do { ?><marquee behavior="scroll" direction="up" scrollamount="2">
-			      <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                    <tr>
-                      <td bgcolor="#000000"><span class="style1"><?php echo $row_rstesti['username']; ?></span></td>
-                    </tr>
-                    <tr>
-                      <td height="34" bgcolor="#000000"><span class="style3"><?php echo $row_rstesti['pesan']; ?></span></td>
-                    </tr> -->
-                                          </table></marquee>
-				    <?php } while ($row_rstesti = mysql_fetch_assoc($rstesti)); ?>
+			
 			  </div>
 			  <p>&nbsp;</p>
 <div class="twoOfThree last headline">

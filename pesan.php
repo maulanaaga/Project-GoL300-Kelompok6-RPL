@@ -203,7 +203,7 @@ function MM_validateForm() { //v4.0
             <p><?php 
 $nextWeek = time() + (7*24*60*60);//7days;24 hours;60 mins;60 secs
 echo 'SEKARANG: '.date('d-m-Y')."\n";
-echo 'MINGGU DEPAN:'.date('Y-m-d',$nextWeek)."\n";
+echo 'MINGGU DEPAN:'.date('d-m-Y',$nextWeek)."\n";
 ?>
   </h10></p>
         <form id="form1" method="post" action="">
